@@ -9,3 +9,4 @@
 - [x] Check and fix artist/profile.html navigation and footer
 - [x] Verify navigation in other test-trivix-main pages if needed
 - [x] Test all links work properly
+- [x] Fix mobile navbar positioning and functionality
