@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Hub - Trivix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white font-['Poppins'] overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-xl border-b border-purple-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">T</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Trivix</span>
+                    </div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="../test-trivix-main/index.html" class="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="artist.html" class="flex items-center space-x-1 text-cyan-400 animate-pulse-glow transition-colors">
+                            <i data-lucide="mic"></i>
+                            <span>Artist</span>
+                        </a>
+                        <a href="profile.html" class="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="user"></i>
+                            <span>Profile</span>
+                        </a>
+                        <a href="dashboard.html" class="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="bar-chart-3"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-gradient-to-r from-purple-600 to-cyan-600 px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                        Connect Wallet
+                    </button>
+                    <button class="md:hidden text-gray-300 hover:text-cyan-400" data-mobile-menu>
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden" data-mobile-menu-items>
+                <div class="px-4 pt-2 pb-3 space-y-1 bg-black/90 backdrop-blur-xl border-t border-purple-500/20">
+                    <a href="index.html" class="flex items-center space-x-1 px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors">
+                        <i data-lucide="home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="artist.html" class="flex items-center space-x-1 px-3 py-2 text-cyan-400 animate-pulse-glow transition-colors">
+                        <i data-lucide="mic"></i>
+                        <span>Artist</span>
+                    </a>
+                    <a href="profile.html" class="flex items-center space-x-1 px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors">
+                        <i data-lucide="user"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="dashboard.html" class="flex items-center space-x-1 px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors">
+                        <i data-lucide="bar-chart-3"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="trending.html" class="flex items-center space-x-1 px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors">
+                        <i data-lucide="trending-up"></i>
+                        <span>Trending</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Back to Home Button -->
+            <div class="mb-8">
+                <a href="index.html" class="inline-flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+            </div>
+
+            <!-- Artist Hub Title -->
+            <div class="text-center mb-12">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                        Artist Hub
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Your creative command center. Manage your music, connect with fans, and grow your career on the blockchain.
+                </p>
+            </div>
+
+            <!-- Placeholder for sections -->
+            <div class="space-y-16">
+                <!-- Artist Profile Section -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-purple-900/30 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20">
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                        <div class="relative">
+                            <div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="user" class="w-16 h-16 text-white"></i>
+                            </div>
+                            <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full border-4 border-gray-900 flex items-center justify-center">
+                                <i data-lucide="check" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div class="absolute top-2 right-2 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                                <i data-lucide="star" class="w-3 h-3 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="text-center md:text-left flex-1">
+                            <h2 class="text-4xl font-bold mb-2">CryptoBeats</h2>
+                            <p class="text-lg text-gray-300 mb-4">Verified Artist • Electronic Music Producer</p>
+                            <p class="text-gray-400 mb-6 max-w-2xl">
+                                Pioneering the fusion of electronic music and blockchain technology. Creating immersive soundscapes that resonate with the digital age.
+                            </p>
+                            <div class="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Electronic</span>
+                                <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm">Blockchain</span>
+                                <span class="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full text-sm">NFT Music</span>
+                            </div>
+                            <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
+                                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                                    <i data-lucide="twitter" class="w-6 h-6"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                                    <i data-lucide="discord" class="w-6 h-6"></i>
+                                </a>
+                                <button class="text-gray-400 hover:text-cyan-400 transition-colors" onclick="shareProfile()">
+                                    <i data-lucide="share" class="w-6 h-6"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                                <button class="bg-gradient-to-r from-purple-600 to-cyan-600 px-6 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                                    Follow
+                                </button>
+                                <button class="border-2 border-purple-500/50 px-6 py-3 rounded-xl font-semibold hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
+                                    Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Latest Releases -->
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i data-lucide="music" class="w-6 h-6 mr-2 text-purple-400"></i>
+                            Latest Releases
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50 hover:border-purple-400/30 transition-all duration-300">
+                                <div class="w-full h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg mb-3 flex items-center justify-center">
+                                    <i data-lucide="music" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold mb-1">Digital Dreams</h4>
+                                <p class="text-sm text-gray-400">Single • 3.2M streams</p>
+                            </div>
+                            <div class="bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300">
+                                <div class="w-full h-32 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-lg mb-3 flex items-center justify-center">
+                                    <i data-lucide="music" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold mb-1">Blockchain Beats</h4>
+                                <p class="text-sm text-gray-400">EP • 2.8M streams</p>
+                            </div>
+                            <div class="bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50 hover:border-pink-400/30 transition-all duration-300">
+                                <div class="w-full h-32 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg mb-3 flex items-center justify-center">
+                                    <i data-lucide="music" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold mb-1">Crypto Waves</h4>
+                                <p class="text-sm text-gray-400">Single • 1.9M streams</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artist Dashboard Section -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-purple-900/30 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20 mb-8">
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                        <div class="relative">
+                            <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
+                                <i data-lucide="user" class="w-12 h-12 text-white"></i>
+                            </div>
+                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-gray-900 flex items-center justify-center">
+                                <i data-lucide="check" class="w-4 h-4 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="text-center md:text-left flex-1">
+                            <h2 class="text-3xl font-bold mb-2">CryptoBeats</h2>
+                            <p class="text-lg text-gray-300 mb-4">Verified Artist</p>
+                            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                                <div class="bg-black/30 backdrop-blur-xl rounded-xl px-4 py-2 border border-purple-500/20">
+                                    <span class="text-sm text-gray-400">Total Tracks</span>
+                                    <div class="font-semibold">24</div>
+                                </div>
+                                <div class="bg-black/30 backdrop-blur-xl rounded-xl px-4 py-2 border border-cyan-500/20">
+                                    <span class="text-sm text-gray-400">Followers</span>
+                                    <div class="font-semibold text-cyan-400">12.5K</div>
+                                </div>
+                                <div class="bg-black/30 backdrop-blur-xl rounded-xl px-4 py-2 border border-pink-500/20">
+                                    <span class="text-sm text-gray-400">Monthly Listeners</span>
+                                    <div class="font-semibold text-pink-400">8.2K</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col space-y-3">
+                            <button class="bg-gradient-to-r from-purple-600 to-cyan-600 px-6 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
+                                Upload New Track
+                            </button>
+                            <button class="border-2 border-purple-500/50 px-6 py-3 rounded-xl font-semibold hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
+                                View Analytics
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-xl rounded-2xl p-6 border border-purple-500/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold">Total Streams</h3>
+                            <i data-lucide="music" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <div class="text-3xl font-bold mb-2">247,891</div>
+                        <div class="flex items-center text-sm">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-green-400 mr-1"></i>
+                            <span class="text-green-400">+12.5%</span>
+                            <span class="text-gray-400 ml-1">vs last month</span>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold">TRVX Earned</h3>
+                            <i data-lucide="coins" class="w-6 h-6 text-yellow-400"></i>
+                        </div>
+                        <div class="text-3xl font-bold mb-2">1,247</div>
+                        <div class="flex items-center text-sm">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-green-400 mr-1"></i>
+                            <span class="text-green-400">+8.3%</span>
+                            <span class="text-gray-400 ml-1">vs last month</span>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-pink-900/50 to-purple-900/50 backdrop-blur-xl rounded-2xl p-6 border border-pink-500/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold">Top Track</h3>
+                            <i data-lucide="trophy" class="w-6 h-6 text-pink-400"></i>
+                        </div>
+                        <div class="text-lg font-bold mb-2">Digital Dreams</div>
+                        <div class="text-sm text-gray-400">89,234 streams</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-xl rounded-2xl p-6 border border-green-500/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold">Engagement</h3>
+                            <i data-lucide="heart" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                        <div class="text-3xl font-bold mb-2">94.2%</div>
+                        <div class="text-sm text-gray-400">Like ratio</div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Streams Chart -->
+                    <div class="bg-gradient-to-br from-gray-900/50 to-blue-900/30 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/20">
+                        <h2 class="text-2xl font-bold mb-6 flex items-center">
+                            <i data-lucide="bar-chart" class="w-6 h-6 mr-2 text-blue-400"></i>
+                            Streams Overview
+                        </h2>
+                        <div class="h-64 flex items-end justify-between space-x-2">
+                            <div class="bg-gradient-to-t from-purple-600 to-purple-400 w-8 h-32 rounded-t-lg"></div>
+                            <div class="bg-gradient-to-t from-cyan-600 to-cyan-400 w-8 h-48 rounded-t-lg"></div>
+                            <div class="bg-gradient-to-t from-pink-600 to-pink-400 w-8 h-24 rounded-t-lg"></div>
+                            <div class="bg-gradient-to-t from-green-600 to-green-400 w-8 h-56 rounded-t-lg"></div>
+                            <div class="bg-gradient-to-t from-yellow-600 to-yellow-400 w-8 h-40 rounded-t-lg"></div>
+                            <div class="bg-gradient-to-t from-orange-600 to-orange-400 w-8 h-36 rounded-t-lg"></div>
+                            <div class="bg-gradient-to-t from-indigo-600 to-indigo-400 w-8 h-44 rounded-t-lg"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-sm text-gray-400">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                        </div>
+                    </div>
+
+                    <!-- Earnings Chart -->
+                    <div class="bg-gradient-to-br from-gray-900/50 to-green-900/30 backdrop-blur-xl rounded-3xl p-8 border border-green-500/20">
+                        <h2 class="text-2xl font-bold mb-6 flex items-center">
+                            <i data-lucide="dollar-sign" class="w-6 h-6 mr-2 text-green-400"></i>
+                            Earnings Breakdown
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                                    <span>Streaming Revenue</span>
+                                </div>
+                                <span class="font-semibold">892 TRVX</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
+                                    <span>NFT Sales</span>
+                                </div>
+                                <span class="font-semibold">245 TRVX</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-4 h-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></div>
+                                    <span>Merchandise</span>
+                                </div>
+                                <span class="font-semibold">110 TRVX</span>
+                            </div>
+                            <div class="border-t border-gray-600 pt-4 mt-6">
+                                <div class="flex items-center justify-between text-lg font-bold">
+                                    <span>Total Earnings</span>
+                                    <span class="text-green-400">1,247 TRVX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Tracks -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-purple-900/30 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20 mb-8">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i data-lucide="music" class="w-6 h-6 mr-2 text-purple-400"></i>
+                        Recent Tracks
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50 hover:border-purple-400/30 transition-all duration-300">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="music" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold">Digital Dreams</h4>
+                                <p class="text-sm text-gray-400">Uploaded 2 days ago</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-purple-400">89,234</div>
+                                <div class="text-sm text-gray-400">streams</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-green-400">342 TRVX</div>
+                                <div class="text-sm text-gray-400">earned</div>
+                            </div>
+                            <button class="text-cyan-400 hover:text-cyan-300">
+                                <i data-lucide="more-vertical" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="music" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold">Blockchain Beats</h4>
+                                <p class="text-sm text-gray-400">Uploaded 1 week ago</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-cyan-400">67,891</div>
+                                <div class="text-sm text-gray-400">streams</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-green-400">289 TRVX</div>
+                                <div class="text-sm text-gray-400">earned</div>
+                            </div>
+                            <button class="text-cyan-400 hover:text-cyan-300">
+                                <i data-lucide="more-vertical" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50 hover:border-pink-400/30 transition-all duration-300">
+                            <div class="w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="music" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold">Crypto Waves</h4>
+                                <p class="text-sm text-gray-400">Uploaded 2 weeks ago</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-pink-400">45,623</div>
+                                <div class="text-sm text-gray-400">streams</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-green-400">198 TRVX</div>
+                                <div class="text-sm text-gray-400">earned</div>
+                            </div>
+                            <button class="text-cyan-400 hover:text-cyan-300">
+                                <i data-lucide="more-vertical" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-purple-900/50 to-indigo-900/30 backdrop-blur-xl rounded-2xl p-6 border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer text-center">
+                        <i data-lucide="upload" class="w-12 h-12 mx-auto mb-4 text-purple-400"></i>
+                        <h3 class="text-lg font-semibold mb-2">Upload New Track</h3>
+                        <p class="text-gray-400 text-sm">Share your latest creation</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-cyan-900/50 to-blue-900/30 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer text-center">
+                        <i data-lucide="bar-chart" class="w-12 h-12 mx-auto mb-4 text-cyan-400"></i>
+                        <h3 class="text-lg font-semibold mb-2">View Analytics</h3>
+                        <p class="text-gray-400 text-sm">Detailed performance insights</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-pink-900/50 to-purple-900/30 backdrop-blur-xl rounded-2xl p-6 border border-pink-500/20 hover:border-pink-400/50 transition-all duration-300 cursor-pointer text-center">
+                        <i data-lucide="users" class="w-12 h-12 mx-auto mb-4 text-pink-400"></i>
+                        <h3 class="text-lg font-semibold mb-2">Manage Fans</h3>
+                        <p class="text-gray-400 text-sm">Connect with your audience</p>
+                    </div>
+                </div>
+
+                <!-- Earnings & Wallet Section -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-green-900/30 backdrop-blur-xl rounded-3xl p-8 border border-green-500/20">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center">
+                        <i data-lucide="dollar-sign" class="w-8 h-8 mr-3 text-green-400"></i>
+                        Earnings & Wallet
+                    </h2>
+
+                    <!-- Connect Wallet Buttons -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Connect Your Wallet</h3>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 px-6 py-4 rounded-xl font-semibold hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3" data-wallet-connect data-wallet-type="metamask">
+                                <i data-lucide="shield" class="w-5 h-5"></i>
+                                <span>MetaMask</span>
+                            </button>
+                            <button class="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3" data-wallet-connect data-wallet-type="walletconnect">
+                                <i data-lucide="smartphone" class="w-5 h-5"></i>
+                                <span>WalletConnect</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Balances -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/20 text-center">
+                            <h4 class="text-sm font-semibold text-gray-400 mb-2">ETH Balance</h4>
+                            <div class="text-2xl font-bold text-cyan-400 mb-1">0.045 ETH</div>
+                            <p class="text-xs text-gray-500">$124.50</p>
+                        </div>
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-green-500/20 text-center">
+                            <h4 class="text-sm font-semibold text-gray-400 mb-2">TRVX Balance</h4>
+                            <div class="text-2xl font-bold text-green-400 mb-1">1,247 TRVX</div>
+                            <p class="text-xs text-gray-500">$1,247.00</p>
+                        </div>
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-purple-500/20 text-center">
+                            <h4 class="text-sm font-semibold text-gray-400 mb-2">Total Earnings</h4>
+                            <div class="text-2xl font-bold text-purple-400 mb-1">$1,371.50</div>
+                            <p class="text-xs text-gray-500">This month</p>
+                        </div>
+                    </div>
+
+                    <!-- Earnings History -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i data-lucide="clock" class="w-5 h-5 mr-2 text-gray-400"></i>
+                            Earnings History
+                        </h3>
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl border border-gray-700/50 overflow-hidden">
+                            <table class="w-full">
+                                <thead class="bg-gray-800/50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase">Date</th>
+                                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase">Source</th>
+                                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase">Amount</th>
+                                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-300 uppercase">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-700/50">
+                                    <tr class="hover:bg-purple-500/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm text-gray-300">2024-07-15</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Streaming Revenue</td>
+                                        <td class="px-6 py-4 text-sm font-semibold text-green-400">+342 TRVX</td>
+                                        <td class="px-6 py-4">
+                                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded-full text-xs">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-cyan-500/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm text-gray-300">2024-07-12</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">NFT Sale</td>
+                                        <td class="px-6 py-4 text-sm font-semibold text-cyan-400">+289 TRVX</td>
+                                        <td class="px-6 py-4">
+                                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded-full text-xs">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-pink-500/5 transition-colors">
+                                        <td class="px-6 py-4 text-sm text-gray-300">2024-07-08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Tipping</td>
+                                        <td class="px-6 py-4 text-sm font-semibold text-pink-400">+198 TRVX</td>
+                                        <td class="px-6 py-4">
+                                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs">Pending</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Withdraw Button -->
+                    <div class="text-center">
+                        <button class="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
+                            Withdraw Earnings
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stories Section -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-cyan-900/30 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center">
+                        <i data-lucide="camera" class="w-8 h-8 mr-3 text-cyan-400"></i>
+                        Artist Stories
+                    </h2>
+
+                    <!-- Stories Carousel -->
+                    <div class="stories-carousel flex space-x-4 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
+                        <div class="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 snap-center border-4 border-purple-400/50">
+                            <i data-lucide="plus" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 snap-center border-4 border-cyan-400/50 relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="music" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+                                <span class="text-xs font-bold text-white">3</span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 snap-center border-4 border-pink-400/50">
+                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 snap-center border-4 border-green-400/50">
+                            <div class="w-16 h-16 bg-gradient-to-br from-pink-600 to-purple-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="dollar-sign" class="w-6 h-6 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 snap-center border-4 border-orange-400/50">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="mic" class="w-6 h-6 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story Preview -->
+                    <div class="mt-6 bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
+                                <i data-lucide="music" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold">New Track Teaser</h4>
+                                <p class="text-sm text-gray-400">Behind the scenes of "Digital Dreams" • 2h ago</p>
+                            </div>
+                            <button class="text-cyan-400 hover:text-cyan-300">
+                                <i data-lucide="play" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Engagement Section -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-pink-900/30 backdrop-blur-xl rounded-3xl p-8 border border-pink-500/20">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center">
+                        <i data-lucide="heart" class="w-8 h-8 mr-3 text-pink-400"></i>
+                        Community Engagement
+                    </h2>
+
+                    <!-- Reputation Badges -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Reputation Badges</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="bg-gradient-to-r from-yellow-500 to-orange-500 px-4 py-2 rounded-full flex items-center space-x-2">
+                                <i data-lucide="star" class="w-4 h-4 text-white"></i>
+                                <span class="text-sm font-semibold text-white">Top Artist</span>
+                            </div>
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full flex items-center space-x-2">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-white"></i>
+                                <span class="text-sm font-semibold text-white">Rising Star</span>
+                            </div>
+                            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-full flex items-center space-x-2">
+                                <i data-lucide="users" class="w-4 h-4 text-white"></i>
+                                <span class="text-sm font-semibold text-white">Community Favorite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tipping Feature -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Support the Artist</h3>
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <div class="flex-1">
+                                    <label class="block text-sm font-medium text-gray-300 mb-2">Tip Amount (TRVX)</label>
+                                    <input type="number" placeholder="10" class="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent" min="1">
+                                </div>
+                                <div class="flex items-end">
+                                    <button class="bg-gradient-to-r from-pink-600 to-purple-600 px-6 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+                                        <i data-lucide="heart" class="w-4 h-4"></i>
+                                        <span>Send Tip</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-2">Show your appreciation and support the artist's work</p>
+                        </div>
+                    </div>
+
+                    <!-- Comments/Reviews -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i data-lucide="message-circle" class="w-5 h-5 mr-2 text-gray-400"></i>
+                            Recent Reviews
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                                        <span class="text-xs font-bold text-white">JD</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="font-semibold text-sm">John Doe</span>
+                                            <div class="flex space-x-1">
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-gray-300">"Absolutely incredible production quality! The blockchain integration makes collecting music so much more meaningful."</p>
+                                        <span class="text-xs text-gray-500">2 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
+                                        <span class="text-xs font-bold text-white">SM</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="font-semibold text-sm">Sarah Music</span>
+                                            <div class="flex space-x-1">
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-gray-300">"CryptoBeats has revolutionized how I experience music. The NFT drops are amazing!"</p>
+                                        <span class="text-xs text-gray-500">1 week ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-black/30 backdrop-blur-xl rounded-xl p-4 border border-gray-700/50">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                                        <span class="text-xs font-bold text-white">BT</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="font-semibold text-sm">BlockTune</span>
+                                            <div class="flex space-x-1">
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-gray-300">"The future of music is here. Can't wait to see what's next from this innovative artist!"</p>
+                                        <span class="text-xs text-gray-500">2 weeks ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Artists Section -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-orange-900/30 backdrop-blur-xl rounded-3xl p-8 border border-orange-500/20">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center">
+                        <i data-lucide="trending-up" class="w-8 h-8 mr-3 text-orange-400"></i>
+                        Trending Artists
+                    </h2>
+
+                    <!-- Horizontal Scroll -->
+                    <div class="flex space-x-6 overflow-x-auto pb-4 scrollbar-hide">
+                        <div class="flex-shrink-0 w-64 bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-10 h-10 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">NeonPulse</h4>
+                                <p class="text-sm text-gray-400">Synthwave Pioneer</p>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-orange-400">45.2K</div>
+                                    <div class="text-xs text-gray-400">Followers</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-green-400">892</div>
+                                    <div class="text-xs text-gray-400">Streams</div>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-4 py-2 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Listen</span>
+                            </button>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-10 h-10 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">BlockBeats</h4>
+                                <p class="text-sm text-gray-400">NFT Music Innovator</p>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-orange-400">38.7K</div>
+                                    <div class="text-xs text-gray-400">Followers</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-green-400">1.2K</div>
+                                    <div class="text-xs text-gray-400">Streams</div>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-4 py-2 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Listen</span>
+                            </button>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-10 h-10 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">EtherSound</h4>
+                                <p class="text-sm text-gray-400">Ambient Producer</p>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-orange-400">29.4K</div>
+                                    <div class="text-xs text-gray-400">Followers</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-green-400">756</div>
+                                    <div class="text-xs text-gray-400">Streams</div>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-4 py-2 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Listen</span>
+                            </button>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-10 h-10 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">CryptoWave</h4>
+                                <p class="text-sm text-gray-400">Electronic DJ</p>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-orange-400">52.1K</div>
+                                    <div class="text-xs text-gray-400">Followers</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-green-400">1.8K</div>
+                                    <div class="text-xs text-gray-400">Streams</div>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-4 py-2 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Listen</span>
+                            </button>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-10 h-10 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">TokenTunes</h4>
+                                <p class="text-sm text-gray-400">Pop Artist</p>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-orange-400">41.8K</div>
+                                    <div class="text-xs text-gray-400">Followers</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-green-400">934</div>
+                                    <div class="text-xs text-gray-400">Streams</div>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-4 py-2 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Listen</span>
+                            </button>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-10 h-10 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">Web3Harmony</h4>
+                                <p class="text-sm text-gray-400">Classical Fusion</p>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-orange-400">33.6K</div>
+                                    <div class="text-xs text-gray-400">Followers</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-green-400">678</div>
+                                    <div class="text-xs text-gray-400">Streams</div>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-4 py-2 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Listen</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended for You Section -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-indigo-900/30 backdrop-blur-xl rounded-3xl p-8 border border-indigo-500/20">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center">
+                        <i data-lucide="sparkles" class="w-8 h-8 mr-3 text-indigo-400"></i>
+                        Recommended for You
+                    </h2>
+
+                    <p class="text-gray-300 mb-6">AI-powered recommendations based on your listening history and preferences</p>
+
+                    <!-- Grid of Recommendations -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-indigo-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold">SynthMaster</h4>
+                                <p class="text-sm text-gray-400">Similar to CryptoBeats</p>
+                            </div>
+                            <div class="text-center mb-4">
+                                <div class="text-sm font-bold text-indigo-400">98% Match</div>
+                                <div class="text-xs text-gray-400">AI Recommendation</div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                                <span>Follow</span>
+                            </button>
+                        </div>
+
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-indigo-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold">DigitalEcho</h4>
+                                <p class="text-sm text-gray-400">Trending in Electronic</p>
+                            </div>
+                            <div class="text-center mb-4">
+                                <div class="text-sm font-bold text-indigo-400">95% Match</div>
+                                <div class="text-xs text-gray-400">Trending Now</div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                                <span>Follow</span>
+                            </button>
+                        </div>
+
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-indigo-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold">BlockVibes</h4>
+                                <p class="text-sm text-gray-400">NFT Music Specialist</p>
+                            </div>
+                            <div class="text-center mb-4">
+                                <div class="text-sm font-bold text-indigo-400">92% Match</div>
+                                <div class="text-xs text-gray-400">Based on History</div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                                <span>Follow</span>
+                            </button>
+                        </div>
+
+                        <div class="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-indigo-400/50 transition-all duration-300 cursor-pointer group">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h4 class="font-semibold">EtherBeats</h4>
+                                <p class="text-sm text-gray-400">Rising Star</p>
+                            </div>
+                            <div class="text-center mb-4">
+                                <div class="text-sm font-bold text-indigo-400">89% Match</div>
+                                <div class="text-xs text-gray-400">New Discovery</div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                                <span>Follow</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 backdrop-blur-xl border-t border-purple-500/20 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">T</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Trivix</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">The future of music streaming on the blockchain.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="discord" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Platform</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Discover Music</a></li>
+                        <li><a href="upload.html" class="hover:text-cyan-400 transition-colors">Upload Songs</a></li>
+                        <li><a href="nft-marketplace.html" class="hover:text-cyan-400 transition-colors">NFT Marketplace</a></li>
+                        <li><a href="earn.html" class="hover:text-cyan-400 transition-colors">Earn Tokens</a></li>
+                        <li><a href="artist.html" class="hover:text-cyan-400 transition-colors">For Artists</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-cyan-400 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">API Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-purple-500/20 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Trivix. All rights reserved. Powered by Blockchain Technology.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
